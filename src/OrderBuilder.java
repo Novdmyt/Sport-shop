@@ -3,8 +3,9 @@ import java.util.List;
 
 public class OrderBuilder {
     private List<Item> items = new ArrayList<>();
-    public void addProduct(Item sport) {
+    public Item addItem(Item sport) {
         items.add(sport);
+        return sport;
     }
     public float getTotalCost(){
         float totalCost = 0.0f;
@@ -13,14 +14,14 @@ public class OrderBuilder {
         }
         return totalCost;
     }
-    public void showOrderDetails() {
+    public void showOrder() {
         for (Item item : items) {
             System.out.println("Назва: " + item.getName());
             System.out.println("Колір: "+ item.getColor());
             System.out.println("Виробник: " + item.getManufacturer());
-            System.out.println("Ціна: " + item.getPrice());
+            System.out.println("Ціна: " + item.getPrice() + " грн");
             }
-        System.out.println("Всього до сплати: " + getTotalCost());
+        System.out.println("Всього до сплати: " + getTotalCost()  + " грн");
         System.out.println();
     }
 }
