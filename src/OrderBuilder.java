@@ -16,10 +16,11 @@ public class OrderBuilder {
     public void showOrderDetails() {
         for (Item item : items) {
             System.out.println("Назва: " + item.getName());
+            System.out.println("Колір: "+ item.getColor());
             System.out.println("Виробник: " + item.getManufacturer());
             System.out.println("Ціна: " + item.getPrice());
-            System.out.println();
-        }
+            }
         System.out.println("Всього до сплати: " + getTotalCost());
+        System.out.println();
     }
 }

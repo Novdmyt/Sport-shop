@@ -12,7 +12,12 @@ public class Cap implements  Item{
 
     @Override
     public String getName() {
-        return color + " Кепка";
+        return " Кепка";
+    }
+
+    @Override
+    public String getColor() {
+        return color;
     }
 
     @Override

@@ -12,8 +12,14 @@ public class TShirt implements Item{
 
     @Override
     public String getName() {
-        return color + " Футболка";
+        return " Футболка";
     }
+
+    @Override
+    public String getColor() {
+        return color;
+    }
+
 
     @Override
     public String getManufacturer() {
