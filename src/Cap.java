@@ -1,32 +1,11 @@
-public class Cap implements  Item{
+public class Cap extends Data {
 
-    private String color;
-    private String manufacturer;
-    private float price;
 
-    public Cap(String color, String manufacturer, float price){
-        this.color = color;
-        this.manufacturer = manufacturer;
-        this.price = price;
+    public Cap(String color, String manufacturer, float price) {
+        super(color, manufacturer, price);
     }
-
     @Override
     public String getName() {
         return " Кепка";
-    }
-
-    @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    @Override
-    public float getPrice() {
-        return price;
     }
 }

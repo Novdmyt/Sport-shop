@@ -1,13 +1,8 @@
-public class TShirt implements Item{
+public class TShirt extends Data {
 
-    private String color;
-    private String manufacturer;
-    private float price;
 
-    public TShirt(String color, String manufacturer, float price){
-        this.color = color;
-        this.manufacturer = manufacturer;
-        this.price = price;
+    public TShirt(String color, String manufacturer, float price) {
+        super(color, manufacturer, price);
     }
 
     @Override
@@ -15,19 +10,5 @@ public class TShirt implements Item{
         return " Футболка";
     }
 
-    @Override
-    public String getColor() {
-        return color;
-    }
 
-
-    @Override
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    @Override
-    public float getPrice() {
-        return price;
-    }
 }
