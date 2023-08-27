@@ -1,4 +1,13 @@
 @startuml
+class Data {
+- String color
+- String manufacturer
+- float price
++ String getName()
++ String getColor()
++ String getManufacturer()
++ float getPrice()
+}
 class Main {
 + {static} void main(String[])
 }
@@ -10,30 +19,19 @@ interface Item {
 }
 class OrderBuilder {
 - List<Item> items
-+ void addProduct(Item)
++ Item addItem(Item)
 + float getTotalCost()
-+ void showOrderDetails()
++ void showOrder()
 }
 class Cap {
-- String color
-- String manufacturer
-- float price
 + String getName()
-+ String getColor()
-+ String getManufacturer()
-+ float getPrice()
 }
 class TShirt {
-- String color
-- String manufacturer
-- float price
 + String getName()
-+ String getColor()
-+ String getManufacturer()
-+ float getPrice()
 }
 
 
-Item <|.. Cap
-Item <|.. TShirt
+Item <|.. Data
+Data <|-- Cap
+Data <|-- TShirt
 @enduml

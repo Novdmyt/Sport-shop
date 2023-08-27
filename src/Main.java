@@ -9,10 +9,10 @@ public class Main {
         orderB.addItem(new TShirt("Синя","Active sports",92.4f));
         orderB.addItem(new Cap("Чорна","Smart caps",10.99f));
 
-        System.out.println("Order A:");
+        System.out.println("Замовлення A:");
         orderA.showOrder();
 
-        System.out.println("Order B:");
+        System.out.println("Замовлення B:");
         orderB.showOrder();
     }
 }
