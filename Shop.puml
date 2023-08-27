@@ -1,0 +1,39 @@
+@startuml
+class Main {
++ {static} void main(String[])
+}
+interface Item {
+~ String getName()
+~ String getColor()
+~ String getManufacturer()
+~ float getPrice()
+}
+class OrderBuilder {
+- List<Item> items
++ void addProduct(Item)
++ float getTotalCost()
++ void showOrderDetails()
+}
+class Cap {
+- String color
+- String manufacturer
+- float price
++ String getName()
++ String getColor()
++ String getManufacturer()
++ float getPrice()
+}
+class TShirt {
+- String color
+- String manufacturer
+- float price
++ String getName()
++ String getColor()
++ String getManufacturer()
++ float getPrice()
+}
+
+
+Item <|.. Cap
+Item <|.. TShirt
+@enduml
