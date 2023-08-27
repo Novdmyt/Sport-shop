@@ -3,16 +3,16 @@ public class Main {
         OrderBuilder orderA = new OrderBuilder();
         OrderBuilder orderB = new OrderBuilder();
 
-        orderA.addProduct(new TShirt("Красна","Active sports", 85f));
-        orderA.addProduct(new Cap("Біла","Smart caps", 12.5f));
+        orderA.addItem(new TShirt("Красна","Active sports", 85f));
+        orderA.addItem(new Cap("Біла","Smart caps", 12.5f));
 
-        orderB.addProduct(new TShirt("Синя","Active sports",92.4f));
-        orderB.addProduct(new Cap("Чорна","Smart caps",10.99f));
+        orderB.addItem(new TShirt("Синя","Active sports",92.4f));
+        orderB.addItem(new Cap("Чорна","Smart caps",10.99f));
 
         System.out.println("Order A:");
-        orderA.showOrderDetails();
+        orderA.showOrder();
 
         System.out.println("Order B:");
-        orderB.showOrderDetails();
+        orderB.showOrder();
     }
 }
